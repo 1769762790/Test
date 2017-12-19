@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			/*
+
+				CSS3标准不固定，所有针对不同的浏览器进行兼容，前缀代表不同的浏览器
+				webkit  safair chrom 猎豹 
+				moz     mozila 火狐
+				ms      微软 IE
+				o 		opera 后来转谷歌内核 
+			*/
+			-webkit-transition: all 1s;
+			-o-transition: all 1s;
+			transition: all 1s;
+			/*
+				过渡的样式
+				让某个样式具有过渡效果
+				all 样式都具有过渡关系
+			*/
+			-webkit-transition-property: all;
+			-o-transition-property: all;
+			transition-property: all;
+
+			-webkit-transition-property: width;
+			-o-transition-property: width;
+			transition-property: width;
+
+			-webkit-transition-property: width,height;
+			-o-transition-property: width,height;
+			transition-property: width,height;
+			/*
+				过渡时间trsdu
+			*/
+			-webkit-transition-duration: 3;
+			-o-transition-duration: 3s;
+			transition-duration: 3s;
+			/*
+				过渡延时
+				延时几秒开始过渡动画
+				trsde
+			*/
+			/*-webkit-transition-delay: 1s;
+			-o-transition-delay: 1s;
+			transition-delay: 1s;*/
+			/*
+				过渡效果
+				linear 匀速
+				ease 默认值，由快到慢
+				ease-in 慢速开始
+				ease-out 慢速结束
+				ease-in-out 慢速开始，慢速结束
+			*/
+			/*-webkit-transition-timing-function: ease-in-out;
+			-o-transition-timing-function: ease;
+			transition-timing-function: ease;*/
+			/*
+				复合属性
+				过渡属性 过渡时间 过渡效果 延时时间
+			*/
+			-webkit-transition: width 2s linear 5s;
+			-o-transition: width 2s linear 5s;
+			transition: width 2s linear 5s;
+
+			-webkit-transition: height 2s linear 0s,background-color 1s ease 2s;
+			-o-transition: height 2s linear 0s,background-color 1s ease 2s;
+			transition: height 2s linear 0s,background-color 1s ease 2s;
+
+			-webkit-transition: width 2s linear 3s,height 3s ease 4s;
+			-o-transition: width 2s linear 3s,height 3s ease 4s;
+			transition: width 2s linear 3s,height 3s ease 4s;
+		}
+		div:hover{
+			width: 1000px;
+			height: 1000px;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>
